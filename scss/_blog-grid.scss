@@ -1,0 +1,153 @@
+// ==============new template for archive grid===========
+
+.blog,.archive,.category{
+    background-color: #fff;
+    .post{
+        flex-direction: column;
+        border-radius: 15px;
+        transition: all .5s;
+        overflow: hidden;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            // background-color: rgba(0, 0, 0, 0.5);
+            background-image:linear-gradient(200deg,transparent, #000);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        img{
+            border-radius: 15px;
+            object-fit: cover;
+            height: 100%;
+            max-height: 1024px;
+            transform: scale(1);
+            transition: all 1s;
+            z-index: 0;
+        }
+        &:hover img{
+                transform: scale(1.1); 
+        }
+        .content{
+            z-index: 3;
+            padding: 1em;
+            width: 100%;
+            color: #fff;
+            font-family: 'Roboto';
+            .category-meta{
+                a{
+                    border-bottom:1px solid var(--e-global-color-primary);
+                }
+            }
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+            h2{
+                font-size: 1.5rem;
+                white-space:wrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: keep-all;
+                line-height: 25px;
+                padding: 2px 0;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+    .cmx-post-grid{
+        padding: 25px 0;
+        display: grid;
+        grid-template-areas:
+        'post-0'
+        'post-1'
+        'post-2'
+        'post-3';
+        gap: 25px;
+        @media (min-width:540px) {
+            grid-template-areas:
+            'post-0 post-0 post-1 post-1'
+            'post-2 post-2 post-3 post-3';
+            gap: 25px;
+            
+        }
+        @media (min-width:1024px) {
+            grid-template-areas:
+            'post-0 post-0 post-1 post-1'
+            'post-0 post-0 post-2 post-3';
+            gap: 25px;
+        }
+        
+        .post-0 { 
+            grid-area: post-0;
+            height:250px;
+            @media (min-width:1024px) {
+                height:525px;
+            }
+         }
+        .post-1 { 
+            grid-area: post-1;
+            height:250px 
+        }
+        .post-2 { 
+            grid-area: post-2;
+            height:250px 
+        }
+        .post-3 { 
+            grid-area: post-3;
+            height:250px
+        }
+    }
+    .cmx-post-list{
+        .post-list{
+            display: flex;
+            justify-content: start;
+            align-items: stretch;
+            border-bottom: 1px solid #d6d6d6;
+            margin: 10px 0;
+            font-family: 'roboto';
+            padding-bottom: 10px;
+            .thumb{
+                display: inline-block;
+                margin-right: 10px;
+                width: 20%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            
+            
+            
+            .content{
+                width: 80%;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    
+                }
+                p{
+                    margin: 0;
+                    font-size: 12px;
+                    color: #666;
+                    a{
+                    color: #666;  
+                    }
+                }
+                h2{
+                    font-size: 14px;
+                    margin:5px 0 ;
+                }
+            }
+        }
+    }
+}
+

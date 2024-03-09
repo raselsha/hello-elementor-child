@@ -1,0 +1,503 @@
+/* comments for variable */
+
+:root {
+    /* Fonts */
+    --font-default: 'Roboto Slab', 'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    /* Colors */
+    /* The *-rgb color names are simply the RGB converted value of the corresponding color for use in the rgba() function */
+    /* Default text color */
+    --color-default: #29333D;
+    --color-default-rgb: 41, 51, 61;
+    /* Defult links color */
+    --color-links: #479AE5;
+    --color-links-hover: #406CCF;
+    /* Primay colors */
+    --color-primary: #479AE5;
+    --color-primary-light: #479AE5;
+    --color-primary-dark: #406CCF;
+    --color-primary-rgb: 71, 154, 229;
+    --color-primary-light-rgb: 71, 154, 229;
+    --color-primary-dark-rgb: 64, 108, 207;
+    /* Secondary colors */
+    --color-secondary: #29333D;
+    --color-secondary-light: #8495AE;
+    --color-secondary-dark: #3a4753;
+    --color-secondary-rgb: 72, 86, 100;
+    --color-secondary-light-rgb: 132, 149, 174;
+    --color-secondary-dark-rgb: 58, 71, 83;
+    /* Secondary colors */
+    --color-accent: var(--color-primary);
+    --color-accent-light: var(--color-primary-light);
+    --color-accent-dark: var(--color-primary-dark);
+    --color-accent-rgb: 250, 143, 56;
+    --color-accent-light-rgb: 251, 177, 116;
+    --color-accent-dark-rgb: 237, 111, 7;
+    /* General colors */
+    --color-blue: #0000ff;
+    --color-blue-rgb: 13, 110, 253;
+    --color-indigo: #6610f2;
+    --color-indigo-rgb: 102, 16, 242;
+    --color-purple: #6f42c1;
+    --color-purple-rgb: 111, 66, 193;
+    --color-pink: #E045BE;
+    --color-pink-rgb: 243, 38, 140;
+    --color-red: #df1529;
+    --color-red-rgb: 223, 21, 4;
+    --color-orange: #fd7e14;
+    --color-orange-rgb: 253, 126, 20;
+    --color-yellow: #ffc107;
+    --color-yellow-rgb: 255, 193, 7;
+    --color-green: #059652;
+    --color-green-rgb: 5, 150, 82;
+    --color-teal: #20c997;
+    --color-teal-rgb: 32, 201, 151;
+    --color-cyan: #0dcaf0;
+    --color-cyan-rgb: 13, 202, 240;
+    --color-white: #ffffff;
+    --color-white-rgb: 255, 255, 255;
+    --color-gray: #6c757d;
+    --color-gray-rgb: 108, 117, 125;
+    --color-black: #000000;
+    --color-black-rgb: 0, 0, 0;
+    --color-sky: #f5f9ff;
+    --color-offwhite: #F4F0DA;
+}
+
+
+/*--------------------------------------------------------------
+# 2. Override default Bootstrap variables
+--------------------------------------------------------------*/
+
+:root {
+    --bs-blue: var(--color-blue);
+    --bs-indigo: var(--color-indigo);
+    --bs-purple: var(--color-purple);
+    --bs-pink: var(--color-pink);
+    --bs-red: var(--color-red);
+    --bs-orange: var(--color-orange);
+    --bs-yellow: var(--color-yellow);
+    --bs-green: var(--color-green);
+    --bs-teal: var(--color-teal);
+    --bs-cyan: var(--color-cyan);
+    --bs-white: var(--color-white);
+    --bs-gray: var(--color-gray);
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-gray-1: #cad5e4;
+    --bs-gray-2: #788AA5;
+    --bs-gray-3: #717171;
+    --bs-primary: var(--color-blue);
+    --bs-secondary: var(--color-blue);
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: var(--color-primary-rgb);
+    --bs-secondary-rgb: var(--color-secondary-rgb);
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: var(--color-white-rgb);
+    --bs-black-rgb: var(--color-black-rgb);
+    --bs-body-color-rgb: var(--color-default-rgb);
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: var(--font-default);
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(var(--color-secondary-light-rgb), 1), rgba(255, 255, 255, 1));
+    --bs-gradient-sky: linear-gradient(180deg, rgba(var(--color-primary-rgb), 1), rgb(255, 255, 255, 1));
+    --bs-body-font-family: var(--font-default);
+    --bs-body-font-size: 1rem;
+    --bs-bangla-font-size: 1.1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: var(--color-default);
+    --bs-body-bg: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# 3. Set color and background class names
+--------------------------------------------------------------*/
+
+
+/* Fonts */
+
+.font-default {
+    font-family: var(--font-default) !important;
+}
+
+.font-primary {
+    font-family: var(--font-primary) !important;
+}
+
+.font-secondary {
+    font-family: var(--font-secondary) !important;
+}
+
+
+/* Text Colors */
+
+.color-default {
+    color: var(--color-default) !important;
+}
+
+.color-links {
+    color: var(--color-links) !important;
+}
+
+.color-links:hover {
+    color: var(--color-links-hover) !important;
+}
+
+.color-primary {
+    color: var(--color-primary) !important;
+}
+
+.color-primary-light {
+    color: var(--color-primary-light) !important;
+}
+
+.color-primary-dark {
+    color: var(--color-primary-dark) !important;
+}
+
+.color-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.color-secondary-light {
+    color: var(--color-secondary-light) !important;
+}
+
+.color-secondary-dark {
+    color: var(--color-secondary-dark) !important;
+}
+
+.color-blue {
+    color: var(--color-blue) !important;
+}
+
+.color-indigo {
+    color: var(--color-indigo) !important;
+}
+
+.color-purple {
+    color: var(--color-purple) !important;
+}
+
+.color-pink {
+    color: var(--color-pink) !important;
+}
+
+.color-red {
+    color: var(--color-red) !important;
+}
+
+.color-orange {
+    color: var(--color-orange) !important;
+}
+
+.color-yellow {
+    color: var(--color-yellow) !important;
+}
+
+.color-green {
+    color: var(--color-green) !important;
+}
+
+.color-teal {
+    color: var(--color-teal) !important;
+}
+
+.color-cyan {
+    color: var(--color-cyan) !important;
+}
+
+.color-white {
+    color: var(--color-white) !important;
+}
+
+.color-gray {
+    color: var(--color-gray) !important;
+}
+
+.color-black {
+    color: var(--color-black) !important;
+}
+
+
+/* Background Colors */
+
+.bg-default {
+    background-color: var(--color-default) !important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-primary-light {
+    background-color: var(--color-primary-light) !important;
+}
+
+.bg-primary-dark {
+    background-color: var(--color-primary-dark) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-secondary-light {
+    background-color: var(--color-secondary-light) !important;
+}
+
+.bg-secondary-dark {
+    background-color: var(--color-secondary-dark) !important;
+}
+
+.bg-sky {
+    background-color: var(--color-sky) !important;
+}
+
+.bg-blue {
+    background-color: var(--color-blue) !important;
+}
+
+.bg-indigo {
+    background-color: var(--color-indigo) !important;
+}
+
+.bg-purple {
+    background-color: var(--color-purple) !important;
+}
+
+.bg-pink {
+    background-color: var(--color-pink) !important;
+}
+
+.bg-red {
+    background-color: var(--color-red) !important;
+}
+
+.bg-orange {
+    background-color: var(--color-orange) !important;
+}
+
+.bg-yellow {
+    background-color: var(--color-yellow) !important;
+}
+
+.bg-green {
+    background-color: var(--color-green) !important;
+}
+
+.bg-teal {
+    background-color: var(--color-teal) !important;
+}
+
+.bg-cyan {
+    background-color: var(--color-cyan) !important;
+}
+
+.bg-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-gray {
+    background-color: var(--color-gray) !important;
+}
+
+.bg-gray-1 {
+    background-color: var( --bs-gray-1) !important;
+}
+
+.bg-gray-2 {
+    background-color: var( --bs-gray-2) !important;
+}
+
+.bg-black {
+    background-color: var(--color-black) !important;
+}
+
+.bg-pink {
+    background-color: var(--color-pink) !important;
+}
+
+.bg-offwhite {
+    background-color: var(--color-offwhite) !important;
+}
+
+.bg-gredient {
+    background-image: var(--bs-gradient);
+}
+
+.bg-gredient-sky {
+    background-image: var(--bs-gradient-sky);
+}
+
+.bg-1 {
+    background-color: #e9f6f3;
+}
+.bg-2 {
+    background-color: #f3e1e5;
+}
+.bg-3 {
+    background-color: #fbf4ed;
+}
+.bg-4 {
+    background-color: #efeef6;
+}
+.bg-5 {
+    background-color: #fffaf0;
+}
+.btn-primary {
+    --bs-btn-color: var(--color-white);
+    --bs-btn-bg: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-primary);
+    ;
+    --bs-btn-hover-bg: var(--color-white);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--color-white);
+    ;
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--color-white);
+    --bs-btn-disabled-bg: var(--color-primary);
+    --bs-btn-disabled-border-color: var(--color-primary);
+    transition: 0.5s;
+    padding: 10px 28px;
+    border-radius: 4px;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: var(--color-white);
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--color-primary);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--color-primary);
+    --bs-gradient: none;
+}
+
+.btn-outline-blue {
+    --bs-btn-bg: var(--color-blue);
+    --bs-btn-color: var(--color-white);
+    --bs-btn-border-color: var(--color-white);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-blue);
+    --bs-btn-hover-border-color: var(--color-white);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--color-blue);
+    --bs-btn-active-border-color: var(--color-white);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-gradient: none;
+    --bs-btn-border-width: 2px;
+    --bs-btn-border-radius: 0rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.5rem;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-white {
+    --bs-btn-color: var(--color-primary);
+    --bs-btn-bg: var(--color-white);
+    --bs-btn-border-color: var(--color-white);
+    ;
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--color-white);
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--color-white);
+    --bs-btn-disabled-bg: var(--color-primary);
+    --bs-btn-disabled-border-color: var(--color-primary);
+    transition: 0.5s;
+    padding: 10px 28px;
+    border-radius: 4px;
+}
+
+.btn-outline-white {
+    --bs-btn-bg: transparent;
+    --bs-btn-color: var(--color-white);
+    --bs-btn-border-color: var(--color-white);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-hover-bg: var(--color-blue);
+    --bs-btn-hover-border-color: var(--color-white);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--color-blue);
+    --bs-btn-active-border-color: var(--color-white);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-gradient: none;
+    --bs-btn-border-width: 2px;
+    --bs-btn-border-radius: 0rem;
+    --bs-btn-padding-x: 1.5rem;
+    --bs-btn-padding-y: 0.8rem;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-container {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: none;
+    border-radius: 30px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "schema-lite",
+  "version": "1.0.0",
+  "description": "= Credits = * Fonts: FontAwesome by Dave Gandy - http://fontawesome.io License: SIL OFL 1.1 * Images in Screenshot: https://www.pexels.com/photo/adolescence-attractive-beautiful-blur-573299/ https://www.pexels.com/photo/autumn-autumn-leaves-blur-close-up-589840/ https://www.pexels.com/photo/concrete-road-between-trees-1563356/ License: CC0 License",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/main.scss css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
