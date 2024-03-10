@@ -12351,6 +12351,9 @@ textarea.form-control-lg {
 }
 
 /* Navigation */
+.site-header {
+  width: 100%;
+}
 .site-header .site-navigation ul {
   margin: 0;
 }
@@ -12471,6 +12474,17 @@ textarea.form-control-lg {
   background-color: var(--e-global-color-primary);
   color: #fff;
   padding: 0.5em 0.7em;
+}
+
+.fixed-header {
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.06);
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+}
+.fixed-header img.custom-logo {
+  width: 50%;
 }
 
 @media (min-width: 540px) {

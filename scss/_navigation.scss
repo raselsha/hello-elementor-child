@@ -1,6 +1,7 @@
 
 /* Navigation */
 .site-header{
+    width: 100%;
     .site-navigation{
         ul {
             margin: 0;
@@ -139,10 +140,14 @@
         padding: .5em .7em;
     }
 }
-// .fixed-header {
-//     position: fixed;
-//     z-index: 100;
-//     box-shadow: 0 6px 9px 0 rgba(0,0,0,.06);
-//     transition: .5s ease-in-out;
-//     background-color: #fff;
-// }
+
+.fixed-header {
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 6px 9px 0 rgba(0,0,0,.06);
+    transition: .5s ease-in-out;
+    background-color: #fff;
+    img.custom-logo{
+        width:50%;
+    }
+}
