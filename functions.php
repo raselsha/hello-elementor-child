@@ -225,3 +225,47 @@ function the_breadcrumb()
         echo '</li></ul>';
     }
 } 
+
+// =========================================================================
+// REGISTER CUSTOMIZER - PANEL, SECTION, SETTINGS AND CONTROL
+// =========================================================================
+function efirm_customize_register( $wp_customize ) 
+{
+    $wp_customize->add_panel( 'basic_settings' , array(
+        'title'    => __( 'Basic Settings', 'hello-elementor' ),
+        'priority' => 20
+    ) ); 
+
+    $wp_customize->add_section( 'call_to_action' , array(
+        'title'    => __( 'Call To action', 'hello-elementor' ),
+        'priority' => 10,
+        'panel'    => 'basic_settings'
+    ) );   
+
+    $wp_customize->add_setting( 'label_setting' , array(
+        'default'   => 'Get In Touch',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_setting( 'link_setting' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control('label_control', array(
+        'label'    => 'Button label', // arbitrary string
+        'description' => 'Add button label', // arbitrary string
+        'section'  => 'call_to_action', // required
+        'settings' => 'label_setting',
+	    'type'     => 'text' // required
+    ) );
+
+    $wp_customize->add_control('link_control', array(
+        'label'    => 'Button link', // arbitrary string
+        'description' => 'Add button link', // arbitrary string
+        'section'  => 'call_to_action', // required
+        'settings' => 'link_setting',
+	    'type'     => 'dropdown-pages' // required
+    ) );
+
+}
+add_action( 'customize_register', 'efirm_customize_register');
