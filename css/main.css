@@ -12354,6 +12354,22 @@ textarea.form-control-lg {
 .site-header {
   width: 100%;
 }
+.site-header.menu-dropdown-tablet:not(.menu-layout-dropdown) .site-navigation-toggle-holder {
+  display: flex !important;
+}
+@media (min-width: 1200px) {
+  .site-header.menu-dropdown-tablet:not(.menu-layout-dropdown) .site-navigation-toggle-holder {
+    display: none !important;
+  }
+}
+.site-header .site-navigation {
+  display: none !important;
+}
+@media (min-width: 1200px) {
+  .site-header .site-navigation {
+    display: flex !important;
+  }
+}
 .site-header .site-navigation ul {
   margin: 0;
 }
@@ -12461,10 +12477,19 @@ textarea.form-control-lg {
 .site-header img.custom-logo {
   width: 50%;
 }
-@media (min-width: 540px) {
+@media (min-width: 1200px) {
   .site-header img.custom-logo {
     width: auto;
   }
+}
+
+.site-navigation-dropdown ul.menu li.current-menu-item a {
+  color: #fff;
+  background-color: var(--e-global-color-primary);
+}
+
+.site-navigation-dropdown ul.menu li a {
+  text-decoration: none;
 }
 
 .site-navigation-toggle-holder {
