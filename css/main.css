@@ -12876,10 +12876,6 @@ h2, .h2, h3, .h3 {
   margin: 5px 0;
 }
 
-main {
-  padding-top: 67px;
-}
-
 @media (min-width: 768px) {
   .page-header .entry-title,
   .site-footer .footer-inner,
@@ -12936,6 +12932,17 @@ main {
 
 .tnp-subscription input.tnp-submit:hover {
   border-width: 0;
+}
+
+.hero::after {
+  background-image: url(../images/hero-after.png);
+  position: absolute;
+  content: "";
+  bottom: -51px;
+  display: block !important;
+  right: 0;
+  width: 1920px;
+  height: 104px;
 }
 
 /*# sourceMappingURL=main.css.map */
